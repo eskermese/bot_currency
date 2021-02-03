@@ -3,9 +3,11 @@ from settings.SETTINGS import *
 from parse.dataPy import Data
 from parse.Parse import Parse
 
+
 @BOT.message_handler(commands=['start'])
 def start_message(message):
     BOT.send_message(message.chat.id, 'Выберите интересующую вас валюту', reply_markup=KEYBOARD_START)
+
 
 @BOT.message_handler(content_types=['text'])
 def get_text_messages(message):
@@ -43,4 +45,3 @@ def get_text_messages(message):
         BOT.send_message(message.chat.id, 'Я тебя не понимаю. Напиши, пожалуйста, /start')
 
 BOT.polling()
-

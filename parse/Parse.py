@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup as BS
 
+
 class Parse():
     def __init__(self, url):
         self.url = url
@@ -21,4 +22,3 @@ class Parse():
 
         self.values = self.values[4:]
         return self.values
-        
